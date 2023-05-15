@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 import Passwords
 
 
+
 def send_email(sender_email, receiver_email, code6password):
     # email content
     subject = "Authentication"
@@ -32,3 +33,5 @@ def send_email(sender_email, receiver_email, code6password):
         server.login(sender_email, Passwords.password)
         # send the email
         server.sendmail(sender_email, receiver_email, message.as_string())
+
+
